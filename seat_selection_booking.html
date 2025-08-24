@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seat Selection - Avengers: Endgame | CinemaMax</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmovieticke7042back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-background/95 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="movie_catalog_browse.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+                        </svg>
+                        <span class="text-xl font-heading font-bold text-text-primary">CinemaMax</span>
+                    </a>
+                </div>
+                
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="movie_catalog_browse.html" class="text-text-secondary hover:text-accent transition-colors duration-200">Movies</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-200">Theaters</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-200">Offers</a>
+                </nav>
+
+                <!-- User Actions -->
+                <div class="flex items-center space-x-4">
+                    <button class="text-text-secondary hover:text-accent transition-colors duration-200 md:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                    <a href="user_registration_login.html" class="text-text-secondary hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Progress Indicator -->
+    <div class="bg-surface/50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <button onclick="history.back()" class="text-text-secondary hover:text-accent transition-colors duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <h1 class="text-lg font-heading font-semibold text-text-primary">Select Seats</h1>
+                </div>
+                
+                <!-- Progress Steps -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center">
+                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm text-text-secondary">Movie</span>
+                    </div>
+                    <div class="w-8 h-px bg-accent"></div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center">
+                            <span class="text-xs text-white font-semibold">2</span>
+                        </div>
+                        <span class="text-sm text-accent font-medium">Seats</span>
+                    </div>
+                    <div class="w-8 h-px bg-white/20"></div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-surface border border-white/20 rounded-full flex items-center justify-center">
+                            <span class="text-xs text-text-secondary font-semibold">3</span>
+                        </div>
+                        <span class="text-sm text-text-secondary">Payment</span>
+                    </div>
+                </div>
+
+                <!-- Timer -->
+                <div class="flex items-center space-x-2 bg-warning/20 px-3 py-1 rounded-lg">
+                    <svg class="w-4 h-4 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span id="timer" class="text-sm font-mono text-warning font-semibold">09:45</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <!-- Theater Map Section -->
+                <div class="lg:col-span-3 order-2 lg:order-1">
+                    <!-- Movie Info Header -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg p-4 mb-6 border border-white/10">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=80&h=120&fit=crop" alt="Avengers: Endgame" class="w-16 h-24 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h2 class="text-xl font-heading font-bold text-text-primary mb-1">Avengers: Endgame</h2>
+                                <div class="flex items-center space-x-4 text-sm text-text-secondary">
+                                    <span>CinemaMax Downtown</span>
+                                    <span>•</span>
+                                    <span>Screen 2</span>
+                                    <span>•</span>
+                                    <span>Today, 7:30 PM</span>
+                                </div>
+                                <div class="flex items-center space-x-2 mt-2">
+                                    <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs font-medium">IMAX</span>
+                                    <span class="bg-surface-700 text-text-secondary px-2 py-1 rounded text-xs">3D</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seat Legend -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg p-4 mb-6 border border-white/10">
+                        <h3 class="text-sm font-heading font-semibold text-text-primary mb-3">Seat Legend</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-surface border border-accent/30 rounded-t-sm"></div>
+                                <span class="text-xs text-text-secondary">Available</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-accent rounded-t-sm"></div>
+                                <span class="text-xs text-text-secondary">Selected</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-error/20 border border-error/30 rounded-t-sm"></div>
+                                <span class="text-xs text-text-secondary">Occupied</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-warning/20 border border-warning/30 rounded-t-sm"></div>
+                                <span class="text-xs text-text-secondary">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theater Layout -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg p-6 border border-white/10">
+                        <!-- Screen -->
+                        <div class="mb-8">
+                            <div class="relative">
+                                <div class="h-3 bg-gradient-to-r from-transparent via-accent/30 to-transparent rounded-full mb-2"></div>
+                                <div class="text-center">
+                                    <span class="text-xs text-text-secondary font-medium">SCREEN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seat Map -->
+                        <div class="space-y-3" id="seatMap">
+                            <!-- Row A - Premium -->
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-xs text-text-secondary font-mono w-4">A</span>
+                                <div class="flex space-x-1">
+                                    <button class="seat premium available" data-seat="A1" data-price="18">
+                                        <span class="sr-only">Seat A1</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="A2" data-price="18">
+                                        <span class="sr-only">Seat A2</span>
+                                    </button>
+                                    <button class="seat premium occupied" data-seat="A3" data-price="18" disabled>
+                                        <span class="sr-only">Seat A3</span>
+                                    </button>
+                                    <button class="seat premium occupied" data-seat="A4" data-price="18" disabled>
+                                        <span class="sr-only">Seat A4</span>
+                                    </button>
+                                    <div class="w-4"></div>
+                                    <button class="seat premium available" data-seat="A5" data-price="18">
+                                        <span class="sr-only">Seat A5</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="A6" data-price="18">
+                                        <span class="sr-only">Seat A6</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="A7" data-price="18">
+                                        <span class="sr-only">Seat A7</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="A8" data-price="18">
+                                        <span class="sr-only">Seat A8</span>
+                                    </button>
+                                </div>
+                                <span class="text-xs text-text-secondary font-mono w-4">A</span>
+                            </div>
+
+                            <!-- Row B - Premium -->
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-xs text-text-secondary font-mono w-4">B</span>
+                                <div class="flex space-x-1">
+                                    <button class="seat premium available" data-seat="B1" data-price="18">
+                                        <span class="sr-only">Seat B1</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="B2" data-price="18">
+                                        <span class="sr-only">Seat B2</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="B3" data-price="18">
+                                        <span class="sr-only">Seat B3</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="B4" data-price="18">
+                                        <span class="sr-only">Seat B4</span>
+                                    </button>
+                                    <div class="w-4"></div>
+                                    <button class="seat premium available" data-seat="B5" data-price="18">
+                                        <span class="sr-only">Seat B5</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="B6" data-price="18">
+                                        <span class="sr-only">Seat B6</span>
+                                    </button>
+                                    <button class="seat premium occupied" data-seat="B7" data-price="18" disabled>
+                                        <span class="sr-only">Seat B7</span>
+                                    </button>
+                                    <button class="seat premium available" data-seat="B8" data-price="18">
+                                        <span class="sr-only">Seat B8</span>
+                                    </button>
+                                </div>
+                                <span class="text-xs text-text-secondary font-mono w-4">B</span>
+                            </div>
+
+                            <!-- Row C - Standard -->
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-xs text-text-secondary font-mono w-4">C</span>
+                                <div class="flex space-x-1">
+                                    <button class="seat standard available" data-seat="C1" data-price="15">
+                                        <span class="sr-only">Seat C1</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="C2" data-price="15">
+                                        <span class="sr-only">Seat C2</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="C3" data-price="15">
+                                        <span class="sr-only">Seat C3</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="C4" data-price="15">
+                                        <span class="sr-only">Seat C4</span>
+                                    </button>
+                                    <div class="w-4"></div>
+                                    <button class="seat standard available" data-seat="C5" data-price="15">
+                                        <span class="sr-only">Seat C5</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="C6" data-price="15">
+                                        <span class="sr-only">Seat C6</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="C7" data-price="15">
+                                        <span class="sr-only">Seat C7</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="C8" data-price="15">
+                                        <span class="sr-only">Seat C8</span>
+                                    </button>
+                                </div>
+                                <span class="text-xs text-text-secondary font-mono w-4">C</span>
+                            </div>
+
+                            <!-- Row D - Standard -->
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-xs text-text-secondary font-mono w-4">D</span>
+                                <div class="flex space-x-1">
+                                    <button class="seat standard available" data-seat="D1" data-price="15">
+                                        <span class="sr-only">Seat D1</span>
+                                    </button>
+                                    <button class="seat standard occupied" data-seat="D2" data-price="15" disabled>
+                                        <span class="sr-only">Seat D2</span>
+                                    </button>
+                                    <button class="seat standard occupied" data-seat="D3" data-price="15" disabled>
+                                        <span class="sr-only">Seat D3</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="D4" data-price="15">
+                                        <span class="sr-only">Seat D4</span>
+                                    </button>
+                                    <div class="w-4"></div>
+                                    <button class="seat standard available" data-seat="D5" data-price="15">
+                                        <span class="sr-only">Seat D5</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="D6" data-price="15">
+                                        <span class="sr-only">Seat D6</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="D7" data-price="15">
+                                        <span class="sr-only">Seat D7</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="D8" data-price="15">
+                                        <span class="sr-only">Seat D8</span>
+                                    </button>
+                                </div>
+                                <span class="text-xs text-text-secondary font-mono w-4">D</span>
+                            </div>
+
+                            <!-- Row E - Standard -->
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-xs text-text-secondary font-mono w-4">E</span>
+                                <div class="flex space-x-1">
+                                    <button class="seat standard available" data-seat="E1" data-price="15">
+                                        <span class="sr-only">Seat E1</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="E2" data-price="15">
+                                        <span class="sr-only">Seat E2</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="E3" data-price="15">
+                                        <span class="sr-only">Seat E3</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="E4" data-price="15">
+                                        <span class="sr-only">Seat E4</span>
+                                    </button>
+                                    <div class="w-4"></div>
+                                    <button class="seat standard available" data-seat="E5" data-price="15">
+                                        <span class="sr-only">Seat E5</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="E6" data-price="15">
+                                        <span class="sr-only">Seat E6</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="E7" data-price="15">
+                                        <span class="sr-only">Seat E7</span>
+                                    </button>
+                                    <button class="seat standard available" data-seat="E8" data-price="15">
+                                        <span class="sr-only">Seat E8</span>
+                                    </button>
+                                </div>
+                                <span class="text-xs text-text-secondary font-mono w-4">E</span>
+                            </div>
+
+                            <!-- Row F - Economy -->
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-xs text-text-secondary font-mono w-4">F</span>
+                                <div class="flex space-x-1">
+                                    <button class="seat economy available" data-seat="F1" data-price="12">
+                                        <span class="sr-only">Seat F1</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="F2" data-price="12">
+                                        <span class="sr-only">Seat F2</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="F3" data-price="12">
+                                        <span class="sr-only">Seat F3</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="F4" data-price="12">
+                                        <span class="sr-only">Seat F4</span>
+                                    </button>
+                                    <div class="w-4"></div>
+                                    <button class="seat economy available" data-seat="F5" data-price="12">
+                                        <span class="sr-only">Seat F5</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="F6" data-price="12">
+                                        <span class="sr-only">Seat F6</span>
+                                    </button>
+                                    <button class="seat economy occupied" data-seat="F7" data-price="12" disabled>
+                                        <span class="sr-only">Seat F7</span>
+                                    </button>
+                                    <button class="seat economy occupied" data-seat="F8" data-price="12" disabled>
+                                        <span class="sr-only">Seat F8</span>
+                                    </button>
+                                </div>
+                                <span class="text-xs text-text-secondary font-mono w-4">F</span>
+                            </div>
+
+                            <!-- Row G - Economy -->
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-xs text-text-secondary font-mono w-4">G</span>
+                                <div class="flex space-x-1">
+                                    <button class="seat economy available" data-seat="G1" data-price="12">
+                                        <span class="sr-only">Seat G1</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="G2" data-price="12">
+                                        <span class="sr-only">Seat G2</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="G3" data-price="12">
+                                        <span class="sr-only">Seat G3</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="G4" data-price="12">
+                                        <span class="sr-only">Seat G4</span>
+                                    </button>
+                                    <div class="w-4"></div>
+                                    <button class="seat economy available" data-seat="G5" data-price="12">
+                                        <span class="sr-only">Seat G5</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="G6" data-price="12">
+                                        <span class="sr-only">Seat G6</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="G7" data-price="12">
+                                        <span class="sr-only">Seat G7</span>
+                                    </button>
+                                    <button class="seat economy available" data-seat="G8" data-price="12">
+                                        <span class="sr-only">Seat G8</span>
+                                    </button>
+                                </div>
+                                <span class="text-xs text-text-secondary font-mono w-4">G</span>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Zoom Controls -->
+                        <div class="flex justify-center mt-6 md:hidden">
+                            <div class="flex items-center space-x-4 bg-surface-700 rounded-lg p-2">
+                                <button id="zoomOut" class="p-2 text-text-secondary hover:text-accent transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"/>
+                                    </svg>
+                                </button>
+                                <span class="text-sm text-text-secondary">Zoom</span>
+                                <button id="zoomIn" class="p-2 text-text-secondary hover:text-accent transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Summary Sidebar -->
+                <div class="lg:col-span-1 order-1 lg:order-2">
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg p-6 border border-white/10 sticky top-24">
+                        <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Booking Summary</h3>
+                        
+                        <!-- Selected Seats -->
+                        <div class="mb-6">
+                            <h4 class="text-sm font-medium text-text-primary mb-2">Selected Seats</h4>
+                            <div id="selectedSeats" class="space-y-2 min-h-[60px]">
+                                <div class="text-sm text-text-secondary italic">No seats selected</div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Types -->
+                        <div class="mb-6">
+                            <h4 class="text-sm font-medium text-text-primary mb-3">Ticket Types</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Adult</span>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="w-8 h-8 bg-surface-700 hover:bg-accent text-text-secondary hover:text-white rounded-full flex items-center justify-center transition-colors" onclick="updateTicketCount('adult', -1)">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                                            </svg>
+                                        </button>
+                                        <span id="adultCount" class="w-8 text-center text-sm font-medium text-text-primary">2</span>
+                                        <button class="w-8 h-8 bg-surface-700 hover:bg-accent text-text-secondary hover:text-white rounded-full flex items-center justify-center transition-colors" onclick="updateTicketCount('adult', 1)">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Child</span>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="w-8 h-8 bg-surface-700 hover:bg-accent text-text-secondary hover:text-white rounded-full flex items-center justify-center transition-colors" onclick="updateTicketCount('child', -1)">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                                            </svg>
+                                        </button>
+                                        <span id="childCount" class="w-8 text-center text-sm font-medium text-text-primary">0</span>
+                                        <button class="w-8 h-8 bg-surface-700 hover:bg-accent text-text-secondary hover:text-white rounded-full flex items-center justify-center transition-colors" onclick="updateTicketCount('child', 1)">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Senior</span>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="w-8 h-8 bg-surface-700 hover:bg-accent text-text-secondary hover:text-white rounded-full flex items-center justify-center transition-colors" onclick="updateTicketCount('senior', -1)">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                                            </svg>
+                                        </button>
+                                        <span id="seniorCount" class="w-8 text-center text-sm font-medium text-text-primary">0</span>
+                                        <button class="w-8 h-8 bg-surface-700 hover:bg-accent text-text-secondary hover:text-white rounded-full flex items-center justify-center transition-colors" onclick="updateTicketCount('senior', 1)">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Promo Code -->
+                        <div class="mb-6">
+                            <h4 class="text-sm font-medium text-text-primary mb-2">Promo Code</h4>
+                            <div class="flex space-x-2">
+                                <input type="text" id="promoCode" placeholder="Enter code" class="flex-1 px-3 py-2 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" />
+                                <button onclick="applyPromoCode()" class="px-4 py-2 bg-accent hover:bg-accent-600 text-white text-sm font-medium rounded-lg transition-colors">
+                                    Apply
+                                </button>
+                            </div>
+                            <div id="promoMessage" class="mt-2 text-xs hidden"></div>
+                        </div>
+
+                        <!-- Price Breakdown -->
+                        <div class="border-t border-white/10 pt-4 mb-6">
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Subtotal</span>
+                                    <span id="subtotal" class="text-text-primary">$0.00</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Convenience Fee</span>
+                                    <span class="text-text-primary">$2.50</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Tax</span>
+                                    <span id="tax" class="text-text-primary">$0.00</span>
+                                </div>
+                                <div id="discountRow" class="flex justify-between text-sm text-success hidden">
+                                    <span>Discount</span>
+                                    <span id="discount">-$0.00</span>
+                                </div>
+                                <div class="border-t border-white/10 pt-2">
+                                    <div class="flex justify-between font-semibold">
+                                        <span class="text-text-primary">Total</span>
+                                        <span id="total" class="text-accent text-lg">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proceed Button -->
+                        <button id="proceedBtn" onclick="proceedToPayment()" disabled class="w-full bg-surface-700 text-text-secondary py-3 px-4 rounded-lg font-semibold transition-all duration-200 cursor-not-allowed">
+                            Select Seats to Continue
+                        </button>
+
+                        <!-- Security Badge -->
+                        <div class="flex items-center justify-center space-x-2 mt-4 text-xs text-text-secondary">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                            <span>Secure Checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Sticky Bottom Panel -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-surface/95 backdrop-blur-cinema border-t border-white/10 p-4 z-40">
+        <div class="flex items-center justify-between mb-3">
+            <div>
+                <div class="text-sm text-text-secondary">Total</div>
+                <div id="mobileTotal" class="text-lg font-semibold text-accent">$0.00</div>
+            </div>
+            <button id="mobileProceedBtn" onclick="proceedToPayment()" disabled class="bg-surface-700 text-text-secondary py-2 px-6 rounded-lg font-semibold transition-all duration-200 cursor-not-allowed">
+                Continue
+            </button>
+        </div>
+        <div id="mobileSelectedSeats" class="text-xs text-text-secondary">
+            No seats selected
+        </div>
+    </div>
+
+    <style>
+        .seat {
+            @apply w-8 h-8 rounded-t-lg border cursor-pointer transition-all duration-200 ease-out relative;
+        }
+        
+        .seat.available {
+            @apply bg-surface border-accent/30 hover:bg-accent/20 hover:border-accent;
+        }
+        
+        .seat.selected {
+            @apply bg-accent border-accent shadow-cinema;
+        }
+        
+        .seat.occupied {
+            @apply bg-error/20 border-error/30 cursor-not-allowed;
+        }
+        
+        .seat.premium.available {
+            @apply bg-warning/20 border-warning/30 hover:bg-warning/30;
+        }
+        
+        .seat.premium.selected {
+            @apply bg-warning border-warning;
+        }
+        
+        .seat.standard.available {
+            @apply bg-surface border-accent/30;
+        }
+        
+        .seat.economy.available {
+            @apply bg-surface-700 border-white/20;
+        }
+        
+        .seat:hover::after {
+            content: attr(data-seat);
+            @apply absolute -top-8 left-1/2 transform -translate-x-1/2 bg-background text-text-primary text-xs px-2 py-1 rounded shadow-cinema-elevated z-10;
+        }
+    </style>
+
+    <script>
+        let selectedSeats = [];
+        let ticketCounts = { adult: 2, child: 0, senior: 0 };
+        let promoDiscount = 0;
+        let timerMinutes = 9;
+        let timerSeconds = 45;
+
+        // Timer functionality
+        function updateTimer() {
+            const timerElement = document.getElementById('timer');
+            const formattedTime = `${timerMinutes.toString().padStart(2, '0')}:${timerSeconds.toString().padStart(2, '0')}`;
+            timerElement.textContent = formattedTime;
+            
+            if (timerMinutes === 0 && timerSeconds === 0) {
+                alert('Session expired! Please start over.');
+                window.location.href = 'movie_details_showtimes.html';
+                return;
+            }
+            
+            if (timerSeconds === 0) {
+                timerMinutes--;
+                timerSeconds = 59;
+            } else {
+                timerSeconds--;
+            }
+            
+            // Warning at 2 minutes
+            if (timerMinutes < 2) {
+                timerElement.parentElement.classList.remove('bg-warning/20');
+                timerElement.parentElement.classList.add('bg-error/20');
+                timerElement.classList.remove('text-warning');
+                timerElement.classList.add('text-error');
+            }
+        }
+
+        // Start timer
+        setInterval(updateTimer, 1000);
+
+        // Seat selection functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const seats = document.querySelectorAll('.seat.available');
+            
+            seats.forEach(seat => {
+                seat.addEventListener('click', function() {
+                    const seatId = this.getAttribute('data-seat');
+                    const seatPrice = parseFloat(this.getAttribute('data-price'));
+                    
+                    if (this.classList.contains('selected')) {
+                        // Deselect seat
+                        this.classList.remove('selected');
+                        selectedSeats = selectedSeats.filter(s => s.id !== seatId);
+                    } else {
+                        // Select seat (limit to total ticket count)
+                        const totalTickets = ticketCounts.adult + ticketCounts.child + ticketCounts.senior;
+                        if (selectedSeats.length < totalTickets) {
+                            this.classList.add('selected');
+                            selectedSeats.push({ id: seatId, price: seatPrice });
+                        } else {
+                            showMessage('Please select the correct number of seats for your tickets.', 'warning');
+                        }
+                    }
+                    
+                    updateBookingSummary();
+                });
+            });
+        });
+
+        // Update ticket counts
+        function updateTicketCount(type, change) {
+            const currentCount = ticketCounts[type];
+            const newCount = Math.max(0, Math.min(8, currentCount + change));
+            
+            if (newCount !== currentCount) {
+                ticketCounts[type] = newCount;
+                document.getElementById(type + 'Count').textContent = newCount;
+                
+                // Adjust selected seats if necessary
+                const totalTickets = ticketCounts.adult + ticketCounts.child + ticketCounts.senior;
+                if (selectedSeats.length > totalTickets) {
+                    // Remove excess selected seats
+                    const excessSeats = selectedSeats.splice(totalTickets);
+                    excessSeats.forEach(seat => {
+                        const seatElement = document.querySelector(`[data-seat="${seat.id}"]`);
+                        if (seatElement) {
+                            seatElement.classList.remove('selected');
+                        }
+                    });
+                }
+                
+                updateBookingSummary();
+            }
+        }
+
+        // Update booking summary
+        function updateBookingSummary() {
+            const selectedSeatsContainer = document.getElementById('selectedSeats');
+            const mobileSelectedSeats = document.getElementById('mobileSelectedSeats');
+            
+            if (selectedSeats.length === 0) {
+                selectedSeatsContainer.innerHTML = '<div class="text-sm text-text-secondary italic">No seats selected</div>';
+                mobileSelectedSeats.textContent = 'No seats selected';
+            } else {
+                const seatsHtml = selectedSeats.map(seat => 
+                    `<div class="flex justify-between items-center bg-surface-700 rounded-lg p-2">
+                        <span class="text-sm font-medium text-text-primary">${seat.id}</span>
+                        <span class="text-sm text-accent">$${seat.price.toFixed(2)}</span>
+                    </div>`
+                ).join('');
+                selectedSeatsContainer.innerHTML = seatsHtml;
+                
+                const seatsList = selectedSeats.map(seat => seat.id).join(', ');
+                mobileSelectedSeats.textContent = `Selected: ${seatsList}`;
+            }
+            
+            // Calculate totals
+            const subtotal = selectedSeats.reduce((sum, seat) => sum + seat.price, 0);
+            const convenienceFee = 2.50;
+            const tax = subtotal * 0.08; // 8% tax
+            const discount = subtotal * promoDiscount;
+            const total = subtotal + convenienceFee + tax - discount;
+            
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('mobileTotal').textContent = `$${total.toFixed(2)}`;
+            
+            if (discount > 0) {
+                document.getElementById('discountRow').classList.remove('hidden');
+                document.getElementById('discount').textContent = `-$${discount.toFixed(2)}`;
+            } else {
+                document.getElementById('discountRow').classList.add('hidden');
+            }
+            
+            // Update proceed button
+            const totalTickets = ticketCounts.adult + ticketCounts.child + ticketCounts.senior;
+            const proceedBtn = document.getElementById('proceedBtn');
+            const mobileProceedBtn = document.getElementById('mobileProceedBtn');
+            
+            if (selectedSeats.length === totalTickets && selectedSeats.length > 0) {
+                proceedBtn.disabled = false;
+                proceedBtn.classList.remove('bg-surface-700', 'text-text-secondary', 'cursor-not-allowed');
+                proceedBtn.classList.add('bg-accent', 'hover:bg-accent-600', 'text-white', 'transform', 'hover:scale-105');
+                proceedBtn.textContent = 'Proceed to Payment';
+                
+                mobileProceedBtn.disabled = false;
+                mobileProceedBtn.classList.remove('bg-surface-700', 'text-text-secondary', 'cursor-not-allowed');
+                mobileProceedBtn.classList.add('bg-accent', 'hover:bg-accent-600', 'text-white');
+                mobileProceedBtn.textContent = 'Continue';
+            } else {
+                proceedBtn.disabled = true;
+                proceedBtn.classList.add('bg-surface-700', 'text-text-secondary', 'cursor-not-allowed');
+                proceedBtn.classList.remove('bg-accent', 'hover:bg-accent-600', 'text-white', 'transform', 'hover:scale-105');
+                
+                mobileProceedBtn.disabled = true;
+                mobileProceedBtn.classList.add('bg-surface-700', 'text-text-secondary', 'cursor-not-allowed');
+                mobileProceedBtn.classList.remove('bg-accent', 'hover:bg-accent-600', 'text-white');
+                
+                if (totalTickets === 0) {
+                    proceedBtn.textContent = 'Select Ticket Quantity';
+                    mobileProceedBtn.textContent = 'Select Tickets';
+                } else if (selectedSeats.length === 0) {
+                    proceedBtn.textContent = 'Select Seats to Continue';
+                    mobileProceedBtn.textContent = 'Select Seats';
+                } else {
+                    proceedBtn.textContent = `Select ${totalTickets - selectedSeats.length} More Seat${totalTickets - selectedSeats.length !== 1 ? 's' : ''}`;
+                    mobileProceedBtn.textContent = `${totalTickets - selectedSeats.length} More`;
+                }
+            }
+        }
+
+        // Apply promo code
+        function applyPromoCode() {
+            const promoCode = document.getElementById('promoCode').value.trim().toUpperCase();
+            const promoMessage = document.getElementById('promoMessage');
+            
+            // Mock promo codes
+            const promoCodes = {
+                'SAVE10': 0.10,
+                'STUDENT': 0.15,
+                'FAMILY': 0.20
+            };
+            
+            if (promoCodes[promoCode]) {
+                promoDiscount = promoCodes[promoCode];
+                promoMessage.textContent = `Promo code applied! ${(promoDiscount * 100)}% discount`;
+                promoMessage.classList.remove('hidden', 'text-error');
+                promoMessage.classList.add('text-success');
+                document.getElementById('promoCode').disabled = true;
+                updateBookingSummary();
+            } else if (promoCode) {
+                promoMessage.textContent = 'Invalid promo code';
+                promoMessage.classList.remove('hidden', 'text-success');
+                promoMessage.classList.add('text-error');
+            }
+        }
+
+        // Proceed to payment
+        function proceedToPayment() {
+            if (selectedSeats.length === 0) {
+                showMessage('Please select your seats first.', 'error');
+                return;
+            }
+            
+            const totalTickets = ticketCounts.adult + ticketCounts.child + ticketCounts.senior;
+            if (selectedSeats.length !== totalTickets) {
+                showMessage('Please select the correct number of seats for your tickets.', 'error');
+                return;
+            }
+            
+            // Store booking data in localStorage
+            const bookingData = {
+                movie: 'Avengers: Endgame',
+                theater: 'CinemaMax Downtown',
+                screen: 'Screen 2',
+                showtime: 'Today, 7:30 PM',
+                selectedSeats: selectedSeats,
+                ticketCounts: ticketCounts,
+                promoCode: document.getElementById('promoCode').value,
+                promoDiscount: promoDiscount,
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('bookingData', JSON.stringify(bookingData));
+            
+            // Navigate to payment
+            window.location.href = 'payment_checkout.html';
+        }
+
+        // Show message function
+        function showMessage(message, type = 'info') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-cinema-elevated transform transition-all duration-300 translate-x-full ${
+                type === 'success' ? 'bg-success text-white' : 
+                type === 'error' ? 'bg-error text-white' : 
+                type === 'warning' ? 'bg-warning text-white' : 
+                'bg-surface text-text-primary'
+            }`;
+            messageDiv.textContent = message;
+            
+            document.body.appendChild(messageDiv);
+            
+            // Animate in
+            setTimeout(() => {
+                messageDiv.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Remove after 4 seconds
+            setTimeout(() => {
+                messageDiv.classList.add('translate-x-full');
+                setTimeout(() => {
+                    document.body.removeChild(messageDiv);
+                }, 300);
+            }, 4000);
+        }
+
+        // Mobile zoom functionality
+        let zoomLevel = 1;
+        const seatMap = document.getElementById('seatMap');
+        
+        document.getElementById('zoomIn')?.addEventListener('click', () => {
+            zoomLevel = Math.min(2, zoomLevel + 0.2);
+            seatMap.style.transform = `scale(${zoomLevel})`;
+            seatMap.style.transformOrigin = 'center';
+        });
+        
+        document.getElementById('zoomOut')?.addEventListener('click', () => {
+            zoomLevel = Math.max(0.8, zoomLevel - 0.2);
+            seatMap.style.transform = `scale(${zoomLevel})`;
+            seatMap.style.transformOrigin = 'center';
+        });
+
+        // Initialize
+        updateBookingSummary();
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

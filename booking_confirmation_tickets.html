@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Confirmed | CinemaMax - Your Ultimate Movie Experience</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmovieticke7042back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-background/95 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="movie_catalog_browse.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+                        </svg>
+                        <span class="text-xl font-heading font-bold text-text-primary">CinemaMax</span>
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="movie_catalog_browse.html" class="text-text-secondary hover:text-accent transition-colors duration-200">Movies</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-200">Cinemas</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-200">My Bookings</a>
+                </nav>
+
+                <!-- User Actions -->
+                <div class="flex items-center space-x-4">
+                    <a href="user_registration_login.html" class="text-text-secondary hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                    </a>
+                    <button class="md:hidden text-text-secondary hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 opacity-5 pointer-events-none">
+            <div class="absolute inset-0" style="background-image: url('https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- Success Hero Section -->
+            <div class="text-center mb-8">
+                <!-- Success Animation -->
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-success/20 rounded-full mb-6 animate-scale-in">
+                    <svg class="w-10 h-10 text-success animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+                
+                <h1 class="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-2">Booking Confirmed!</h1>
+                <p class="text-text-secondary text-lg mb-4">Your tickets are ready. Get ready for an amazing movie experience!</p>
+                
+                <!-- Booking Reference -->
+                <div class="inline-flex items-center bg-surface/80 backdrop-blur-cinema rounded-cinema px-6 py-3 border border-white/10">
+                    <span class="text-text-secondary text-sm mr-2">Booking Reference:</span>
+                    <span class="text-accent font-mono font-semibold text-lg">#CM2025-8742</span>
+                    <button id="copyReference" class="ml-3 text-text-secondary hover:text-accent transition-colors duration-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Digital Ticket Display -->
+                <div class="lg:col-span-2">
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg shadow-cinema-elevated border border-white/10 overflow-hidden">
+                        <!-- Ticket Header -->
+                        <div class="bg-gradient-to-r from-accent/20 to-accent/10 p-6 border-b border-white/10">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h2 class="text-2xl font-heading font-bold text-text-primary mb-1">Avengers: Endgame</h2>
+                                    <p class="text-text-secondary">CinemaMax Downtown • Screen 3</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-text-primary font-semibold">Aug 20, 2025</p>
+                                    <p class="text-accent font-bold text-lg">7:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Body -->
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- QR Code Section -->
+                                <div class="text-center">
+                                    <div class="bg-white p-4 rounded-lg inline-block mb-4">
+                                        <svg class="w-32 h-32" viewBox="0 0 128 128">
+                                            <!-- QR Code Pattern -->
+                                            <rect width="128" height="128" fill="white"/>
+                                            <g fill="black">
+                                                <!-- Corner squares -->
+                                                <rect x="0" y="0" width="21" height="21"/>
+                                                <rect x="107" y="0" width="21" height="21"/>
+                                                <rect x="0" y="107" width="21" height="21"/>
+                                                <!-- Inner corner squares -->
+                                                <rect x="3" y="3" width="15" height="15" fill="white"/>
+                                                <rect x="110" y="3" width="15" height="15" fill="white"/>
+                                                <rect x="3" y="110" width="15" height="15" fill="white"/>
+                                                <rect x="7" y="7" width="7" height="7"/>
+                                                <rect x="114" y="7" width="7" height="7"/>
+                                                <rect x="7" y="114" width="7" height="7"/>
+                                                <!-- Data pattern -->
+                                                <rect x="28" y="7" width="7" height="7"/>
+                                                <rect x="42" y="14" width="7" height="7"/>
+                                                <rect x="56" y="7" width="7" height="7"/>
+                                                <rect x="70" y="14" width="7" height="7"/>
+                                                <rect x="84" y="7" width="7" height="7"/>
+                                                <rect x="28" y="28" width="7" height="7"/>
+                                                <rect x="49" y="35" width="7" height="7"/>
+                                                <rect x="70" y="28" width="7" height="7"/>
+                                                <rect x="91" y="35" width="7" height="7"/>
+                                                <rect x="35" y="49" width="7" height="7"/>
+                                                <rect x="56" y="56" width="7" height="7"/>
+                                                <rect x="77" y="49" width="7" height="7"/>
+                                                <rect x="98" y="56" width="7" height="7"/>
+                                                <rect x="28" y="70" width="7" height="7"/>
+                                                <rect x="49" y="77" width="7" height="7"/>
+                                                <rect x="70" y="70" width="7" height="7"/>
+                                                <rect x="91" y="77" width="7" height="7"/>
+                                                <rect x="35" y="91" width="7" height="7"/>
+                                                <rect x="56" y="98" width="7" height="7"/>
+                                                <rect x="77" y="91" width="7" height="7"/>
+                                                <rect x="98" y="98" width="7" height="7"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p class="text-text-secondary text-sm">Scan at cinema entrance</p>
+                                </div>
+
+                                <!-- Ticket Details -->
+                                <div class="space-y-4">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p class="text-text-secondary text-sm">Seats</p>
+                                            <p class="text-text-primary font-semibold">F7, F8</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-text-secondary text-sm">Screen</p>
+                                            <p class="text-text-primary font-semibold">Screen 3</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-text-secondary text-sm">Format</p>
+                                            <p class="text-text-primary font-semibold">IMAX 3D</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-text-secondary text-sm">Duration</p>
+                                            <p class="text-text-primary font-semibold">3h 1m</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="border-t border-white/10 pt-4">
+                                        <div class="flex justify-between items-center mb-2">
+                                            <span class="text-text-secondary">Adult Tickets (2x)</span>
+                                            <span class="text-text-primary">$24.00</span>
+                                        </div>
+                                        <div class="flex justify-between items-center mb-2">
+                                            <span class="text-text-secondary">Convenience Fee</span>
+                                            <span class="text-text-primary">$2.50</span>
+                                        </div>
+                                        <div class="flex justify-between items-center font-semibold text-lg border-t border-white/10 pt-2">
+                                            <span class="text-text-primary">Total Paid</span>
+                                            <span class="text-accent">$26.50</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Actions -->
+                        <div class="bg-surface/50 p-4 border-t border-white/10">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <button id="downloadPDF" class="flex items-center justify-center px-4 py-2 bg-accent hover:bg-accent-600 text-white rounded-lg transition-all duration-200 transform hover:scale-105">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                    <span class="text-sm">PDF</span>
+                                </button>
+                                <button id="emailTicket" class="flex items-center justify-center px-4 py-2 bg-surface hover:bg-surface-700 text-text-primary rounded-lg transition-all duration-200">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <span class="text-sm">Email</span>
+                                </button>
+                                <button id="addCalendar" class="flex items-center justify-center px-4 py-2 bg-surface hover:bg-surface-700 text-text-primary rounded-lg transition-all duration-200">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                    </svg>
+                                    <span class="text-sm">Calendar</span>
+                                </button>
+                                <button id="addWallet" class="flex items-center justify-center px-4 py-2 bg-surface hover:bg-surface-700 text-text-primary rounded-lg transition-all duration-200">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                                    </svg>
+                                    <span class="text-sm">Wallet</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Sharing -->
+                    <div class="mt-6 bg-surface/80 backdrop-blur-cinema rounded-cinema-lg shadow-cinema border border-white/10 p-6">
+                        <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Share Your Movie Plans</h3>
+                        <div class="flex space-x-4">
+                            <button class="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                                Twitter
+                            </button>
+                            <button class="flex items-center px-4 py-2 bg-blue-800 hover:bg-blue-900 text-white rounded-lg transition-all duration-200">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Facebook
+                            </button>
+                            <button class="flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-all duration-200">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
+                                WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cinema Information Sidebar -->
+                <div class="space-y-6">
+                    <!-- Cinema Details -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg shadow-cinema border border-white/10 p-6">
+                        <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Cinema Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-text-primary font-semibold mb-2">CinemaMax Downtown</h4>
+                                <p class="text-text-secondary text-sm mb-2">123 Main Street, Downtown<br />New York, NY 10001</p>
+                                <button class="text-accent hover:text-accent-400 text-sm transition-colors duration-200">
+                                    View on Map →
+                                </button>
+                            </div>
+                            
+                            <div class="border-t border-white/10 pt-4">
+                                <h4 class="text-text-primary font-semibold mb-2">Important Information</h4>
+                                <ul class="text-text-secondary text-sm space-y-1">
+                                    <li>• Please arrive 30 minutes before showtime</li>
+                                    <li>• Parking available in adjacent garage</li>
+                                    <li>• Outside food and drinks not permitted</li>
+                                    <li>• Valid ID required for R-rated films</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="border-t border-white/10 pt-4">
+                                <h4 class="text-text-primary font-semibold mb-2">Contact</h4>
+                                <p class="text-text-secondary text-sm">Phone: (555) 123-4567</p>
+                                <p class="text-text-secondary text-sm">Email: downtown@cinemamax.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Summary -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg shadow-cinema border border-white/10 p-6">
+                        <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">Booking Summary</h3>
+                        
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-secondary">Transaction ID</span>
+                                <span class="text-text-primary font-mono">#TXN-2025-8742</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-secondary">Payment Method</span>
+                                <span class="text-text-primary">•••• 4242</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-secondary">Booking Date</span>
+                                <span class="text-text-primary">Aug 20, 2025</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-secondary">Status</span>
+                                <span class="text-success">Confirmed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Confirmation Notice -->
+                    <div class="bg-accent/10 border border-accent/20 rounded-cinema-lg p-4">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <p class="text-text-primary text-sm font-semibold mb-1">Email Confirmation Sent</p>
+                                <p class="text-text-secondary text-xs">A copy of your tickets has been sent to john.doe@email.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Registration Prompt -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg shadow-cinema border border-white/10 p-6">
+                        <h3 class="text-lg font-heading font-semibold text-text-primary mb-2">Create an Account</h3>
+                        <p class="text-text-secondary text-sm mb-4">Save your booking history and enjoy faster checkout for future purchases.</p>
+                        <a href="user_registration_login.html" class="inline-flex items-center px-4 py-2 bg-accent hover:bg-accent-600 text-white rounded-lg transition-all duration-200 transform hover:scale-105">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                            Create Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="mt-8 bg-surface/80 backdrop-blur-cinema rounded-cinema-lg shadow-cinema border border-white/10 p-6">
+                <h3 class="text-lg font-heading font-semibold text-text-primary mb-4">What's Next?</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-text-primary font-semibold mb-2">Arrive Early</h4>
+                        <p class="text-text-secondary text-sm">Get to the cinema 30 minutes before showtime for the best experience.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-text-primary font-semibold mb-2">Show Your Ticket</h4>
+                        <p class="text-text-secondary text-sm">Present your QR code at the entrance for quick and easy access.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-text-primary font-semibold mb-2">Enjoy the Show</h4>
+                        <p class="text-text-secondary text-sm">Sit back, relax, and enjoy your movie experience at CinemaMax!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue Browsing -->
+            <div class="mt-8 text-center">
+                <a href="movie_catalog_browse.html" class="inline-flex items-center px-6 py-3 bg-surface hover:bg-surface-700 text-text-primary rounded-lg transition-all duration-200 transform hover:scale-105">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2m-5 4v6m-3-3h6"/>
+                    </svg>
+                    Book More Movies
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Messages -->
+    <div id="messageContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+    <script>
+        // Copy booking reference functionality
+        document.getElementById('copyReference').addEventListener('click', () => {
+            const referenceText = '#CM2025-8742';
+            navigator.clipboard.writeText(referenceText).then(() => {
+                showMessage('Booking reference copied to clipboard!');
+            }).catch(() => {
+                showMessage('Failed to copy reference', 'error');
+            });
+        });
+
+        // Download PDF functionality
+        document.getElementById('downloadPDF').addEventListener('click', () => {
+            showMessage('Downloading ticket PDF...');
+            // Simulate PDF download
+            setTimeout(() => {
+                showMessage('Ticket PDF downloaded successfully!');
+            }, 1500);
+        });
+
+        // Email ticket functionality
+        document.getElementById('emailTicket').addEventListener('click', () => {
+            showMessage('Sending ticket to your email...');
+            setTimeout(() => {
+                showMessage('Ticket sent to john.doe@email.com');
+            }, 2000);
+        });
+
+        // Add to calendar functionality
+        document.getElementById('addCalendar').addEventListener('click', () => {
+            const event = {
+                title: 'Avengers: Endgame - CinemaMax Downtown',
+                start: '2025-08-20T19:30:00',
+                end: '2025-08-20T22:31:00',
+                description: 'Movie: Avengers: Endgame\nCinema: CinemaMax Downtown\nSeats: F7, F8\nScreen: 3',
+                location: '123 Main Street, Downtown, New York, NY 10001'
+            };
+            
+            // Create calendar URL (Google Calendar format)
+            const startDate = event.start.replace(/[-:]/g, '').replace('T', 'T') + '00Z';
+            const endDate = event.end.replace(/[-:]/g, '').replace('T', 'T') + '00Z';
+            const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
+            
+            window.open(calendarUrl, '_blank');
+            showMessage('Opening calendar app...');
+        });
+
+        // Add to wallet functionality
+        document.getElementById('addWallet').addEventListener('click', () => {
+            showMessage('Adding ticket to wallet...');
+            setTimeout(() => {
+                showMessage('Ticket added to wallet successfully!');
+            }, 1500);
+        });
+
+        // Message display function
+        function showMessage(message, type = 'success') {
+            const container = document.getElementById('messageContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `p-4 rounded-lg shadow-cinema-elevated transform transition-all duration-300 translate-x-full ${
+                type === 'success' ? 'bg-success text-white' : 'bg-error text-white'
+            }`;
+            messageDiv.textContent = message;
+            
+            container.appendChild(messageDiv);
+            
+            // Animate in
+            setTimeout(() => {
+                messageDiv.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Remove after 4 seconds
+            setTimeout(() => {
+                messageDiv.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (container.contains(messageDiv)) {
+                        container.removeChild(messageDiv);
+                    }
+                }, 300);
+            }, 4000);
+        }
+
+        // Auto-hide success animation after 3 seconds
+        setTimeout(() => {
+            const successIcon = document.querySelector('.animate-pulse');
+            if (successIcon) {
+                successIcon.classList.remove('animate-pulse');
+            }
+        }, 3000);
+
+        // Social sharing functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Twitter')) {
+                button.addEventListener('click', () => {
+                    const text = "Just booked tickets for Avengers: Endgame at CinemaMax! Can't wait for the show! 🎬 #CinemaMax #AvengersEndgame";
+                    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+                    window.open(url, '_blank');
+                });
+            } else if (button.textContent.includes('Facebook')) {
+                button.addEventListener('click', () => {
+                    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+                    window.open(url, '_blank');
+                });
+            } else if (button.textContent.includes('WhatsApp')) {
+                button.addEventListener('click', () => {
+                    const text = "Just booked tickets for Avengers: Endgame at CinemaMax Downtown! Show starts at 7:30 PM on Aug 20, 2025. Seats F7, F8. Can't wait! 🎬";
+                    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+                    window.open(url, '_blank');
+                });
+            }
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show welcome message after a short delay
+            setTimeout(() => {
+                showMessage('Your booking has been confirmed successfully!');
+            }, 1000);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

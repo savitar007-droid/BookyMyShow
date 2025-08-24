@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avengers: Endgame - Movie Details & Showtimes | CinemaMax</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmovieticke7042back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-background/95 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left Section -->
+                <div class="flex items-center space-x-4">
+                    <!-- Back Button -->
+                    <button onclick="history.back()" class="p-2 text-text-secondary hover:text-accent transition-colors duration-200 lg:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Logo -->
+                    <a href="movie_catalog_browse.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+                        </svg>
+                        <span class="text-xl font-heading font-bold text-text-primary">CinemaMax</span>
+                    </a>
+                </div>
+
+                <!-- Right Section -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search Button -->
+                    <button class="p-2 text-text-secondary hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Cart Button -->
+                    <button class="relative p-2 text-text-secondary hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h8m-8 0a2 2 0 100 4 2 2 0 000-4zm8 0a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+                    </button>
+                    
+                    <!-- User Menu -->
+                    <div class="relative">
+                        <button class="flex items-center space-x-2 text-text-secondary hover:text-accent transition-colors duration-200">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" alt="User" class="w-8 h-8 rounded-full border border-white/20" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                            <span class="hidden sm:block text-sm font-medium">John Doe</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-background to-surface/20">
+            <!-- Background Image -->
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://images.unsplash.com/photo-1489599904472-af35ff2c7c3f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Movie Background" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+            </div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Movie Poster -->
+                    <div class="lg:col-span-1">
+                        <div class="relative group">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=800&auto=format&fit=crop" alt="Avengers: Endgame Poster" class="w-full max-w-sm mx-auto lg:max-w-full rounded-cinema-lg shadow-cinema-elevated transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1489599904472-af35ff2c7c3f?q=80&w=800&auto=format&fit=crop'; this.onerror=null;" />
+                            
+                            <!-- Play Trailer Button -->
+                            <button id="trailerBtn" class="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-cinema-lg">
+                                <div class="bg-accent hover:bg-accent-600 rounded-full p-4 transform hover:scale-110 transition-all duration-200">
+                                    <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Movie Information -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <!-- Title and Rating -->
+                        <div>
+                            <h1 class="text-4xl lg:text-5xl font-heading font-bold text-text-primary mb-4">Avengers: Endgame</h1>
+                            
+                            <!-- Movie Meta -->
+                            <div class="flex flex-wrap items-center gap-4 mb-4">
+                                <!-- Rating -->
+                                <div class="flex items-center space-x-2">
+                                    <div class="flex items-center">
+                                        <svg class="w-5 h-5 text-warning fill-current" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
+                                        <span class="text-text-primary font-semibold ml-1">8.4</span>
+                                    </div>
+                                    <span class="text-text-secondary text-sm">(2.1M reviews)</span>
+                                </div>
+                                
+                                <!-- Duration -->
+                                <div class="flex items-center space-x-1 text-text-secondary">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    <span>3h 1m</span>
+                                </div>
+                                
+                                <!-- Release Year -->
+                                <span class="text-text-secondary">2019</span>
+                                
+                                <!-- Rating Badge -->
+                                <span class="bg-surface px-2 py-1 rounded text-sm font-medium text-text-primary">PG-13</span>
+                            </div>
+
+                            <!-- Genre Tags -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">Action</span>
+                                <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">Adventure</span>
+                                <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">Drama</span>
+                                <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">Sci-Fi</span>
+                            </div>
+                        </div>
+
+                        <!-- Synopsis -->
+                        <div>
+                            <h3 class="text-xl font-heading font-semibold text-text-primary mb-3">Synopsis</h3>
+                            <div id="synopsis" class="text-text-secondary leading-relaxed">
+                                <p class="mb-4">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+                                <div id="synopsisExpanded" class="hidden">
+                                    <p class="mb-4">The grave course of events set in motion by Thanos that wiped out half the universe and fractured the Avengers ranks compels the remaining Avengers to take one final stand in Marvel Studios' grand conclusion to twenty-two films, Avengers: Endgame.</p>
+                                </div>
+                            </div>
+                            <button id="expandSynopsis" class="text-accent hover:text-accent-400 transition-colors duration-200 text-sm font-medium mt-2">Read More</button>
+                        </div>
+
+                        <!-- Cast -->
+                        <div>
+                            <h3 class="text-xl font-heading font-semibold text-text-primary mb-3">Cast</h3>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="flex items-center space-x-3">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Robert Downey Jr." class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                                    <div>
+                                        <p class="text-text-primary font-medium text-sm">Robert Downey Jr.</p>
+                                        <p class="text-text-secondary text-xs">Tony Stark / Iron Man</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Chris Evans" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                                    <div>
+                                        <p class="text-text-primary font-medium text-sm">Chris Evans</p>
+                                        <p class="text-text-secondary text-xs">Steve Rogers / Captain America</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=100&auto=format&fit=crop" alt="Mark Ruffalo" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                                    <div>
+                                        <p class="text-text-primary font-medium text-sm">Mark Ruffalo</p>
+                                        <p class="text-text-secondary text-xs">Bruce Banner / Hulk</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Sharing -->
+                        <div class="flex items-center space-x-4 pt-4 border-t border-white/10">
+                            <span class="text-text-secondary text-sm">Share:</span>
+                            <button class="p-2 bg-surface hover:bg-surface-700 rounded-lg transition-colors duration-200">
+                                <svg class="w-5 h-5 text-text-secondary hover:text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 bg-surface hover:bg-surface-700 rounded-lg transition-colors duration-200">
+                                <svg class="w-5 h-5 text-text-secondary hover:text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 bg-surface hover:bg-surface-700 rounded-lg transition-colors duration-200">
+                                <svg class="w-5 h-5 text-text-secondary hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showtimes Section -->
+        <section class="py-8 bg-surface/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Date Picker -->
+                    <div class="lg:col-span-1">
+                        <h2 class="text-2xl font-heading font-bold text-text-primary mb-6">Select Date</h2>
+                        <div class="space-y-2">
+                            <button class="w-full p-4 bg-accent text-white rounded-lg font-medium transition-all duration-200 hover:bg-accent-600">
+                                <div class="text-left">
+                                    <div class="text-sm opacity-90">Today</div>
+                                    <div class="font-semibold">Aug 20, 2025</div>
+                                </div>
+                            </button>
+                            <button class="w-full p-4 bg-surface hover:bg-surface-700 text-text-primary rounded-lg font-medium transition-all duration-200">
+                                <div class="text-left">
+                                    <div class="text-sm text-text-secondary">Tomorrow</div>
+                                    <div class="font-semibold">Aug 21, 2025</div>
+                                </div>
+                            </button>
+                            <button class="w-full p-4 bg-surface hover:bg-surface-700 text-text-primary rounded-lg font-medium transition-all duration-200">
+                                <div class="text-left">
+                                    <div class="text-sm text-text-secondary">Friday</div>
+                                    <div class="font-semibold">Aug 22, 2025</div>
+                                </div>
+                            </button>
+                            <button class="w-full p-4 bg-surface hover:bg-surface-700 text-text-primary rounded-lg font-medium transition-all duration-200">
+                                <div class="text-left">
+                                    <div class="text-sm text-text-secondary">Saturday</div>
+                                    <div class="font-semibold">Aug 23, 2025</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cinema Locations -->
+                    <div class="lg:col-span-3">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-heading font-bold text-text-primary">Showtimes</h2>
+                            <div class="flex items-center space-x-4">
+                                <!-- Ticket Pricing Info -->
+                                <div class="hidden sm:flex items-center space-x-4 text-sm text-text-secondary">
+                                    <div class="flex items-center space-x-1">
+                                        <div class="w-3 h-3 bg-success rounded-full"></div>
+                                        <span>Adult: $12.50</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <div class="w-3 h-3 bg-warning rounded-full"></div>
+                                        <span>Child: $8.50</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <div class="w-3 h-3 bg-accent rounded-full"></div>
+                                        <span>Senior: $10.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Cinema 1 -->
+                            <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg border border-white/10">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-heading font-semibold text-text-primary">CinemaMax Downtown</h3>
+                                            <p class="text-text-secondary text-sm">123 Main Street, Downtown • 2.1 miles</p>
+                                        </div>
+                                        <button class="text-accent hover:text-accent-400 transition-colors duration-200">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Showtimes Grid -->
+                                    <div class="space-y-4">
+                                        <!-- Standard Showtimes -->
+                                        <div>
+                                            <div class="flex items-center space-x-2 mb-3">
+                                                <span class="text-text-primary font-medium">Standard</span>
+                                                <span class="bg-surface-700 text-text-secondary px-2 py-1 rounded text-xs">2D</span>
+                                            </div>
+                                            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="10:30 AM" data-screen="Standard" data-available="156">
+                                                    <div class="font-semibold">10:30 AM</div>
+                                                    <div class="text-xs text-success">156 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="1:15 PM" data-screen="Standard" data-available="89">
+                                                    <div class="font-semibold">1:15 PM</div>
+                                                    <div class="text-xs text-success">89 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="4:00 PM" data-screen="Standard" data-available="23">
+                                                    <div class="font-semibold">4:00 PM</div>
+                                                    <div class="text-xs text-warning">23 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="6:45 PM" data-screen="Standard" data-available="67">
+                                                    <div class="font-semibold">6:45 PM</div>
+                                                    <div class="text-xs text-success">67 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="9:30 PM" data-screen="Standard" data-available="5">
+                                                    <div class="font-semibold">9:30 PM</div>
+                                                    <div class="text-xs text-error">5 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-surface-700 text-text-secondary cursor-not-allowed border border-white/10 rounded-lg text-center" disabled>
+                                                    <div class="font-semibold">12:15 AM</div>
+                                                    <div class="text-xs">Sold Out</div>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- IMAX Showtimes -->
+                                        <div>
+                                            <div class="flex items-center space-x-2 mb-3">
+                                                <span class="text-text-primary font-medium">IMAX</span>
+                                                <span class="bg-accent text-white px-2 py-1 rounded text-xs">Premium</span>
+                                                <span class="text-text-secondary text-sm">+$5.00</span>
+                                            </div>
+                                            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="11:00 AM" data-screen="IMAX" data-available="78">
+                                                    <div class="font-semibold">11:00 AM</div>
+                                                    <div class="text-xs text-success">78 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="2:30 PM" data-screen="IMAX" data-available="45">
+                                                    <div class="font-semibold">2:30 PM</div>
+                                                    <div class="text-xs text-success">45 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="6:00 PM" data-screen="IMAX" data-available="12">
+                                                    <div class="font-semibold">6:00 PM</div>
+                                                    <div class="text-xs text-warning">12 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="9:45 PM" data-screen="IMAX" data-available="34">
+                                                    <div class="font-semibold">9:45 PM</div>
+                                                    <div class="text-xs text-success">34 seats</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cinema 2 -->
+                            <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg border border-white/10">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-heading font-semibold text-text-primary">CinemaMax Westside</h3>
+                                            <p class="text-text-secondary text-sm">456 Oak Avenue, Westside • 3.7 miles</p>
+                                        </div>
+                                        <button class="text-accent hover:text-accent-400 transition-colors duration-200">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Showtimes Grid -->
+                                    <div class="space-y-4">
+                                        <!-- 3D Showtimes -->
+                                        <div>
+                                            <div class="flex items-center space-x-2 mb-3">
+                                                <span class="text-text-primary font-medium">3D</span>
+                                                <span class="bg-surface-700 text-text-secondary px-2 py-1 rounded text-xs">3D</span>
+                                                <span class="text-text-secondary text-sm">+$3.00</span>
+                                            </div>
+                                            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="12:00 PM" data-screen="3D" data-available="92">
+                                                    <div class="font-semibold">12:00 PM</div>
+                                                    <div class="text-xs text-success">92 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="3:30 PM" data-screen="3D" data-available="56">
+                                                    <div class="font-semibold">3:30 PM</div>
+                                                    <div class="text-xs text-success">56 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="7:15 PM" data-screen="3D" data-available="18">
+                                                    <div class="font-semibold">7:15 PM</div>
+                                                    <div class="text-xs text-warning">18 seats</div>
+                                                </button>
+                                                <button class="showtime-btn p-3 bg-background hover:bg-accent hover:text-white border border-white/20 rounded-lg transition-all duration-200 text-center" data-time="10:45 PM" data-screen="3D" data-available="73">
+                                                    <div class="font-semibold">10:45 PM</div>
+                                                    <div class="text-xs text-success">73 seats</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="py-8 bg-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-heading font-bold text-text-primary">User Reviews</h2>
+                    <button class="text-accent hover:text-accent-400 transition-colors duration-200 font-medium">Write Review</button>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Review 1 -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg border border-white/10 p-6">
+                        <div class="flex items-start space-x-4">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=100&auto=format&fit=crop" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-semibold text-text-primary">Sarah Johnson</h4>
+                                    <div class="flex items-center">
+                                        <div class="flex text-warning">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </div>
+                                        <span class="ml-2 text-sm text-text-secondary">5.0</span>
+                                    </div>
+                                </div>
+                                <p class="text-text-secondary text-sm mb-2">2 days ago</p>
+                                <p class="text-text-primary">An absolutely incredible conclusion to the Marvel saga. The emotional depth and spectacular action sequences make this a must-watch film. The 3-hour runtime flies by!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg border border-white/10 p-6">
+                        <div class="flex items-start space-x-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Mike Chen" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-semibold text-text-primary">Mike Chen</h4>
+                                    <div class="flex items-center">
+                                        <div class="flex text-warning">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 text-text-secondary" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </div>
+                                        <span class="ml-2 text-sm text-text-secondary">4.0</span>
+                                    </div>
+                                </div>
+                                <p class="text-text-secondary text-sm mb-2">1 week ago</p>
+                                <p class="text-text-primary">Great movie with amazing visual effects. Some pacing issues in the middle act, but the finale more than makes up for it. Definitely worth seeing in IMAX!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Reviews -->
+                <div class="text-center mt-6">
+                    <button class="bg-surface hover:bg-surface-700 text-text-primary px-6 py-3 rounded-lg font-medium transition-all duration-200">
+                        Load More Reviews
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Selected Showtime Modal -->
+    <div id="showtimeModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-surface rounded-cinema-lg shadow-cinema-elevated max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-heading font-semibold text-text-primary">Confirm Selection</h3>
+                    <button id="closeModal" class="text-text-secondary hover:text-text-primary transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-background rounded-lg p-4">
+                        <h4 class="font-semibold text-text-primary mb-2">Avengers: Endgame</h4>
+                        <div class="space-y-2 text-sm text-text-secondary">
+                            <div class="flex justify-between">
+                                <span>Cinema:</span>
+                                <span id="selectedCinema" class="text-text-primary">CinemaMax Downtown</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Date:</span>
+                                <span id="selectedDate" class="text-text-primary">Today, Aug 20, 2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Time:</span>
+                                <span id="selectedTime" class="text-text-primary">10:30 AM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Screen:</span>
+                                <span id="selectedScreen" class="text-text-primary">Standard</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Available Seats:</span>
+                                <span id="selectedAvailable" class="text-success">156 seats</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-3">
+                        <button id="cancelSelection" class="flex-1 bg-surface-700 hover:bg-surface-600 text-text-primary py-3 px-4 rounded-lg font-medium transition-all duration-200">
+                            Cancel
+                        </button>
+                        <a href="seat_selection_booking.html" id="proceedToSeats" class="flex-1 bg-accent hover:bg-accent-600 text-white py-3 px-4 rounded-lg font-medium transition-all duration-200 text-center">
+                            Select Seats
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trailer Modal -->
+    <div id="trailerModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="relative max-w-4xl w-full">
+                <button id="closeTrailer" class="absolute -top-12 right-0 text-white hover:text-accent transition-colors duration-200">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <div class="bg-black rounded-lg overflow-hidden aspect-video">
+                    <iframe id="trailerVideo" class="w-full h-full" src frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Synopsis expand/collapse
+        const expandSynopsis = document.getElementById('expandSynopsis');
+        const synopsisExpanded = document.getElementById('synopsisExpanded');
+        
+        expandSynopsis.addEventListener('click', () => {
+            if (synopsisExpanded.classList.contains('hidden')) {
+                synopsisExpanded.classList.remove('hidden');
+                expandSynopsis.textContent = 'Read Less';
+            } else {
+                synopsisExpanded.classList.add('hidden');
+                expandSynopsis.textContent = 'Read More';
+            }
+        });
+
+        // Showtime selection
+        const showtimeButtons = document.querySelectorAll('.showtime-btn:not([disabled])');
+        const showtimeModal = document.getElementById('showtimeModal');
+        const closeModal = document.getElementById('closeModal');
+        const cancelSelection = document.getElementById('cancelSelection');
+        
+        showtimeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const time = button.dataset.time;
+                const screen = button.dataset.screen;
+                const available = button.dataset.available;
+                
+                // Update modal content
+                document.getElementById('selectedTime').textContent = time;
+                document.getElementById('selectedScreen').textContent = screen;
+                document.getElementById('selectedAvailable').textContent = `${available} seats`;
+                
+                // Show modal
+                showtimeModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeShowtimeModal() {
+            showtimeModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeModal.addEventListener('click', closeShowtimeModal);
+        cancelSelection.addEventListener('click', closeShowtimeModal);
+
+        // Close modal on backdrop click
+        showtimeModal.addEventListener('click', (e) => {
+            if (e.target === showtimeModal) {
+                closeShowtimeModal();
+            }
+        });
+
+        // Trailer modal
+        const trailerBtn = document.getElementById('trailerBtn');
+        const trailerModal = document.getElementById('trailerModal');
+        const closeTrailer = document.getElementById('closeTrailer');
+        const trailerVideo = document.getElementById('trailerVideo');
+        
+        trailerBtn.addEventListener('click', () => {
+            trailerVideo.src = 'https://www.youtube.com/embed/TcMBFSGVi1c?autoplay=1';
+            trailerModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeTrailerModal() {
+            trailerModal.classList.add('hidden');
+            trailerVideo.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        closeTrailer.addEventListener('click', closeTrailerModal);
+
+        // Close trailer modal on backdrop click
+        trailerModal.addEventListener('click', (e) => {
+            if (e.target === trailerModal) {
+                closeTrailerModal();
+            }
+        });
+
+        // Escape key to close modals
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (!showtimeModal.classList.contains('hidden')) {
+                    closeShowtimeModal();
+                }
+                if (!trailerModal.classList.contains('hidden')) {
+                    closeTrailerModal();
+                }
+            }
+        });
+
+        // Date selection
+        const dateButtons = document.querySelectorAll('[data-date]');
+        dateButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active state from all buttons
+                dateButtons.forEach(btn => {
+                    btn.classList.remove('bg-accent', 'text-white');
+                    btn.classList.add('bg-surface', 'hover:bg-surface-700', 'text-text-primary');
+                });
+                
+                // Add active state to clicked button
+                button.classList.remove('bg-surface', 'hover:bg-surface-700', 'text-text-primary');
+                button.classList.add('bg-accent', 'text-white');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading states for showtime buttons
+        showtimeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.add('opacity-75');
+                setTimeout(() => {
+                    button.classList.remove('opacity-75');
+                }, 300);
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

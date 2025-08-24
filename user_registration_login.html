@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | CinemaMax - Your Ultimate Movie Experience</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmovieticke7042back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-background/95 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="movie_catalog_browse.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+                        </svg>
+                        <span class="text-xl font-heading font-bold text-text-primary">CinemaMax</span>
+                    </a>
+                </div>
+                
+                <!-- Help Link -->
+                <div class="flex items-center">
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-200 text-sm font-medium">
+                        Help & Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 opacity-5 pointer-events-none">
+            <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1489599904472-af35ff2c7c3f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'); background-size: cover; background-position: center;"></div>
+        </div>
+
+        <div class="max-w-md mx-auto relative z-10">
+            <!-- Welcome Section -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-heading font-bold text-text-primary mb-2">Welcome Back</h1>
+                <p class="text-text-secondary">Sign in to your account or create a new one to start booking tickets</p>
+            </div>
+
+            <!-- Auth Card -->
+            <div class="bg-surface/80 backdrop-blur-cinema rounded-cinema-lg shadow-cinema-elevated border border-white/10">
+                <!-- Tab Navigation -->
+                <div class="flex border-b border-white/10">
+                    <button id="loginTab" class="flex-1 py-4 px-6 text-center font-medium transition-all duration-200 border-b-2 border-accent text-accent">
+                        Sign In
+                    </button>
+                    <button id="registerTab" class="flex-1 py-4 px-6 text-center font-medium transition-all duration-200 border-b-2 border-transparent text-text-secondary hover:text-text-primary">
+                        Register
+                    </button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="loginForm" class="p-6 space-y-6">
+                    <form class="space-y-4">
+                        <!-- Email Field -->
+                        <div>
+                            <label for="loginEmail" class="block text-sm font-medium text-text-primary mb-2">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" value="john.doe@email.com" class="w-full px-4 py-3 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200" placeholder="Enter your email" required />
+                            <div id="loginEmailError" class="text-error text-sm mt-1 hidden">Please enter a valid email address</div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div>
+                            <label for="loginPassword" class="block text-sm font-medium text-text-primary mb-2">Password</label>
+                            <div class="relative">
+                                <input type="password" id="loginPassword" name="password" value="password123" class="w-full px-4 py-3 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 pr-12" placeholder="Enter your password" required />
+                                <button type="button" id="toggleLoginPassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-secondary hover:text-text-primary transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="loginPasswordError" class="text-error text-sm mt-1 hidden">Password must be at least 6 characters</div>
+                        </div>
+
+                        <!-- Remember Me & Forgot Password -->
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 text-accent bg-background border-white/20 rounded focus:ring-accent focus:ring-2" />
+                                <span class="ml-2 text-sm text-text-secondary">Remember me</span>
+                            </label>
+                            <a href="javascript:void(0)" class="text-sm text-accent hover:text-accent-400 transition-colors duration-200">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <!-- Sign In Button -->
+                        <button type="submit" id="loginSubmit" class="w-full bg-accent hover:bg-accent-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface">
+                            <span id="loginButtonText">Sign In</span>
+                            <svg id="loginSpinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden inline" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Social Login -->
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-white/10"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-surface text-text-secondary">Or continue with</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <button class="flex justify-center items-center px-4 py-2 border border-white/20 rounded-lg bg-background hover:bg-surface transition-all duration-200">
+                            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=100&auto=format&fit=crop" alt="Google" class="w-5 h-5 mr-2" onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                            <span class="text-text-primary text-sm">Google</span>
+                        </button>
+                        <button class="flex justify-center items-center px-4 py-2 border border-white/20 rounded-lg bg-background hover:bg-surface transition-all duration-200">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=100&auto=format&fit=crop" alt="Facebook" class="w-5 h-5 mr-2" onerror="this.src='https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                            <span class="text-text-primary text-sm">Facebook</span>
+                        </button>
+                    </div>
+
+                    <!-- Guest Checkout -->
+                    <div class="text-center pt-4 border-t border-white/10">
+                        <p class="text-text-secondary text-sm mb-3">Don't want to create an account?</p>
+                        <a href="movie_catalog_browse.html" class="inline-flex items-center text-accent hover:text-accent-400 transition-colors duration-200 font-medium">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                            Continue as Guest
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="p-6 space-y-6 hidden">
+                    <form class="space-y-4">
+                        <!-- Full Name -->
+                        <div>
+                            <label for="registerName" class="block text-sm font-medium text-text-primary mb-2">Full Name</label>
+                            <input type="text" id="registerName" name="name" class="w-full px-4 py-3 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200" placeholder="Enter your full name" required />
+                            <div id="registerNameError" class="text-error text-sm mt-1 hidden">Please enter your full name</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="registerEmail" class="block text-sm font-medium text-text-primary mb-2">Email Address</label>
+                            <input type="email" id="registerEmail" name="email" class="w-full px-4 py-3 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200" placeholder="Enter your email" required />
+                            <div id="registerEmailError" class="text-error text-sm mt-1 hidden">Please enter a valid email address</div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label for="registerPhone" class="block text-sm font-medium text-text-primary mb-2">Phone Number</label>
+                            <input type="tel" id="registerPhone" name="phone" class="w-full px-4 py-3 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200" placeholder="Enter your phone number" required />
+                            <div id="registerPhoneError" class="text-error text-sm mt-1 hidden">Please enter a valid phone number</div>
+                        </div>
+
+                        <!-- Password -->
+                        <div>
+                            <label for="registerPassword" class="block text-sm font-medium text-text-primary mb-2">Password</label>
+                            <div class="relative">
+                                <input type="password" id="registerPassword" name="password" class="w-full px-4 py-3 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 pr-12" placeholder="Create a password" required />
+                                <button type="button" id="toggleRegisterPassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-secondary hover:text-text-primary transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="registerPasswordError" class="text-error text-sm mt-1 hidden">Password must be at least 8 characters</div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div>
+                            <label for="confirmPassword" class="block text-sm font-medium text-text-primary mb-2">Confirm Password</label>
+                            <div class="relative">
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="w-full px-4 py-3 bg-background border border-white/20 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 pr-12" placeholder="Confirm your password" required />
+                                <button type="button" id="toggleConfirmPassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-secondary hover:text-text-primary transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="confirmPasswordError" class="text-error text-sm mt-1 hidden">Passwords do not match</div>
+                        </div>
+
+                        <!-- Marketing Preferences -->
+                        <div class="flex items-start">
+                            <input type="checkbox" id="marketingConsent" class="w-4 h-4 text-accent bg-background border-white/20 rounded focus:ring-accent focus:ring-2 mt-1" />
+                            <label for="marketingConsent" class="ml-3 text-sm text-text-secondary">
+                                I would like to receive promotional emails about new movies, special offers, and exclusive deals.
+                            </label>
+                        </div>
+
+                        <!-- Terms & Conditions -->
+                        <div class="flex items-start">
+                            <input type="checkbox" id="termsConsent" class="w-4 h-4 text-accent bg-background border-white/20 rounded focus:ring-accent focus:ring-2 mt-1" required />
+                            <label for="termsConsent" class="ml-3 text-sm text-text-secondary">
+                                I agree to the <a href="javascript:void(0)" class="text-accent hover:text-accent-400 transition-colors">Terms of Service</a> and <a href="javascript:void(0)" class="text-accent hover:text-accent-400 transition-colors">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <!-- Register Button -->
+                        <button type="submit" id="registerSubmit" class="w-full bg-accent hover:bg-accent-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface">
+                            <span id="registerButtonText">Create Account</span>
+                            <svg id="registerSpinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden inline" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Social Registration -->
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-white/10"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-surface text-text-secondary">Or register with</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <button class="flex justify-center items-center px-4 py-2 border border-white/20 rounded-lg bg-background hover:bg-surface transition-all duration-200">
+                            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=100&auto=format&fit=crop" alt="Google" class="w-5 h-5 mr-2" onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                            <span class="text-text-primary text-sm">Google</span>
+                        </button>
+                        <button class="flex justify-center items-center px-4 py-2 border border-white/20 rounded-lg bg-background hover:bg-surface transition-all duration-200">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=100&auto=format&fit=crop" alt="Facebook" class="w-5 h-5 mr-2" onerror="this.src='https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
+                            <span class="text-text-primary text-sm">Facebook</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Links -->
+            <div class="text-center mt-6 space-y-2">
+                <p class="text-text-secondary text-sm">
+                    By continuing, you agree to our 
+                    <a href="javascript:void(0)" class="text-accent hover:text-accent-400 transition-colors">Terms of Service</a> 
+                    and 
+                    <a href="javascript:void(0)" class="text-accent hover:text-accent-400 transition-colors">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success/Error Messages -->
+    <div id="messageContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+    <script>
+        // Tab switching functionality
+        const loginTab = document.getElementById('loginTab');
+        const registerTab = document.getElementById('registerTab');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('border-accent', 'text-accent');
+            loginTab.classList.remove('border-transparent', 'text-text-secondary');
+            registerTab.classList.remove('border-accent', 'text-accent');
+            registerTab.classList.add('border-transparent', 'text-text-secondary');
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        });
+
+        registerTab.addEventListener('click', () => {
+            registerTab.classList.add('border-accent', 'text-accent');
+            registerTab.classList.remove('border-transparent', 'text-text-secondary');
+            loginTab.classList.remove('border-accent', 'text-accent');
+            loginTab.classList.add('border-transparent', 'text-text-secondary');
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+
+        // Password visibility toggle
+        function togglePasswordVisibility(toggleId, inputId) {
+            const toggle = document.getElementById(toggleId);
+            const input = document.getElementById(inputId);
+            
+            toggle.addEventListener('click', () => {
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                
+                // Update icon
+                const icon = toggle.querySelector('svg');
+                if (type === 'text') {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"></path>';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>';
+                }
+            });
+        }
+
+        togglePasswordVisibility('toggleLoginPassword', 'loginPassword');
+        togglePasswordVisibility('toggleRegisterPassword', 'registerPassword');
+        togglePasswordVisibility('toggleConfirmPassword', 'confirmPassword');
+
+        // Form validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePhone(phone) {
+            const re = /^[\+]?[1-9][\d]{0,15}$/;
+            return re.test(phone.replace(/\s/g, ''));
+        }
+
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+            errorElement.classList.remove('hidden');
+        }
+
+        function hideError(elementId) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.classList.add('hidden');
+        }
+
+        function showMessage(message, type = 'success') {
+            const container = document.getElementById('messageContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `p-4 rounded-lg shadow-cinema-elevated transform transition-all duration-300 translate-x-full ${
+                type === 'success' ? 'bg-success text-white' : 'bg-error text-white'
+            }`;
+            messageDiv.textContent = message;
+            
+            container.appendChild(messageDiv);
+            
+            // Animate in
+            setTimeout(() => {
+                messageDiv.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                messageDiv.classList.add('translate-x-full');
+                setTimeout(() => {
+                    container.removeChild(messageDiv);
+                }, 300);
+            }, 5000);
+        }
+
+        // Login form submission
+        document.querySelector('#loginForm form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const submitBtn = document.getElementById('loginSubmit');
+            const buttonText = document.getElementById('loginButtonText');
+            const spinner = document.getElementById('loginSpinner');
+            
+            // Reset errors
+            hideError('loginEmailError');
+            hideError('loginPasswordError');
+            
+            let isValid = true;
+            
+            if (!validateEmail(email)) {
+                showError('loginEmailError', 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            if (password.length < 6) {
+                showError('loginPasswordError', 'Password must be at least 6 characters');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show loading state
+                submitBtn.disabled = true;
+                buttonText.textContent = 'Signing In...';
+                spinner.classList.remove('hidden');
+                
+                // Simulate API call
+                setTimeout(() => {
+                    showMessage('Login successful! Redirecting to movie catalog...');
+                    setTimeout(() => {
+                        window.location.href = 'movie_catalog_browse.html';
+                    }, 1500);
+                }, 2000);
+            }
+        });
+
+        // Register form submission
+        document.querySelector('#registerForm form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const phone = document.getElementById('registerPhone').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const termsConsent = document.getElementById('termsConsent').checked;
+            const submitBtn = document.getElementById('registerSubmit');
+            const buttonText = document.getElementById('registerButtonText');
+            const spinner = document.getElementById('registerSpinner');
+            
+            // Reset errors
+            hideError('registerNameError');
+            hideError('registerEmailError');
+            hideError('registerPhoneError');
+            hideError('registerPasswordError');
+            hideError('confirmPasswordError');
+            
+            let isValid = true;
+            
+            if (name.trim().length < 2) {
+                showError('registerNameError', 'Please enter your full name');
+                isValid = false;
+            }
+            
+            if (!validateEmail(email)) {
+                showError('registerEmailError', 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            if (!validatePhone(phone)) {
+                showError('registerPhoneError', 'Please enter a valid phone number');
+                isValid = false;
+            }
+            
+            if (password.length < 8) {
+                showError('registerPasswordError', 'Password must be at least 8 characters');
+                isValid = false;
+            }
+            
+            if (password !== confirmPassword) {
+                showError('confirmPasswordError', 'Passwords do not match');
+                isValid = false;
+            }
+            
+            if (!termsConsent) {
+                showMessage('Please accept the Terms of Service and Privacy Policy', 'error');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show loading state
+                submitBtn.disabled = true;
+                buttonText.textContent = 'Creating Account...';
+                spinner.classList.remove('hidden');
+                
+                // Simulate API call
+                setTimeout(() => {
+                    showMessage('Account created successfully! Welcome to CinemaMax!');
+                    setTimeout(() => {
+                        window.location.href = 'movie_catalog_browse.html';
+                    }, 1500);
+                }, 2000);
+            }
+        });
+
+        // Real-time validation
+        document.getElementById('loginEmail').addEventListener('blur', (e) => {
+            if (e.target.value && !validateEmail(e.target.value)) {
+                showError('loginEmailError', 'Please enter a valid email address');
+            } else {
+                hideError('loginEmailError');
+            }
+        });
+
+        document.getElementById('registerEmail').addEventListener('blur', (e) => {
+            if (e.target.value && !validateEmail(e.target.value)) {
+                showError('registerEmailError', 'Please enter a valid email address');
+            } else {
+                hideError('registerEmailError');
+            }
+        });
+
+        document.getElementById('confirmPassword').addEventListener('input', (e) => {
+            const password = document.getElementById('registerPassword').value;
+            if (e.target.value && e.target.value !== password) {
+                showError('confirmPasswordError', 'Passwords do not match');
+            } else {
+                hideError('confirmPasswordError');
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
